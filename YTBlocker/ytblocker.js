@@ -1,6 +1,7 @@
 const regexVal = /ads|_ad|ad_/g;
 
 function cancel(requestDetails) {
+    if(requestDetails.method == "POST") return {cancel: false};
     return {cancel: (requestDetails.url.match(regexVal))};
 }
   
