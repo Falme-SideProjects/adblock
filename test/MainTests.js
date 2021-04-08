@@ -42,5 +42,15 @@ describe('YTBlocker', function() {
         var response = ytblocker.cancel(input);
       assert.strictEqual(response.cancel, null);
     });
+
+    it('Should return false when ad value is the value "thread"', function() {
+        var input = 
+        {
+            method: "GET",
+            url: "https://forum.unity.com/threads/onapplicationquit.31913/"
+        };
+        var response = ytblocker.cancel(input);
+      assert.strictEqual(response.cancel, null);
+    });
   });
 });

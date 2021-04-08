@@ -1,5 +1,5 @@
 //Test regex at https://regex101.com/
-const regexVal = /[^=ad]ads|_ad|ad_/g;
+const regexVal = /[^=ad|thread]ads|_ad|ad\/|ad_/g;
 
 function cancel(requestDetails) {
     if(requestDetails.method == "POST") return {cancel: false};
